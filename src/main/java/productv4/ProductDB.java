@@ -50,6 +50,29 @@ public class ProductDB {
             myBook.setAuthor("Jim Lennon");
             product = myBook;
         }
+        if (productCode.equalsIgnoreCase("studios")) {
+            Music myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("");
+            myMusic.setPrice(57.50);
+            myMusic.setArtist("Microsoft 1.1");
+            product = myMusic;
+        } else if (productCode.equalsIgnoreCase("eclipse")) {
+            Software mySoftware = new Software();
+            mySoftware.setCode(productCode);
+            mySoftware.setDescription("Build Java apps");
+            mySoftware.setPrice(57.50);
+            mySoftware.setVersion("Eclipse Neon");
+            product = mySoftware;
+        } else if (productCode.equalsIgnoreCase("oracle")) {
+            Software mySoftware = new Software();
+            mySoftware.setCode(productCode);
+            mySoftware.setDescription("Latest MySQL");
+            mySoftware.setPrice(54.50);
+            mySoftware.setVersion("Oracle 3.0");
+            product = mySoftware;
+        }
+
 
         return product;
 
