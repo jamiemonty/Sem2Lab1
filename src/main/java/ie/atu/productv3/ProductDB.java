@@ -2,31 +2,59 @@ package ie.atu.productv3;
 
 public class ProductDB {
 
-    ie.atu.productv2.Software mySoftware = null;
-    if (productCode.equalsIgnoreCase("studios")) {
-        mySoftware = new ie.atu.productv2.Software();
-        mySoftware.setCode(productCode);
-        mySoftware.setDescription("Visual Studios");
-        mySoftware.setPrice(57.50);
-        mySoftware.setVersion("Microsoft 1.1");
-    } else if (productCode.equalsIgnoreCase("eclipse")) {
-        mySoftware = new ie.atu.productv2.Software();
-        mySoftware.setCode(productCode);
-        mySoftware.setDescription("Build Java apps");
-        mySoftware.setPrice(57.50);
-        mySoftware.setVersion("Eclipse Neon");
-    } else if (productCode.equalsIgnoreCase("oracle")) {
-        mySoftware = new Software();
-        mySoftware.setCode(productCode);
-        mySoftware.setDescription("Latest MySQL");
-        mySoftware.setPrice(54.50);
-        mySoftware.setVersion("Oracle 3.0");
+    public static Product getProduct(String productCode) {
+
+        Product product = null;
+        if (productCode.equalsIgnoreCase("studios")) {
+            Software mySoftware = new Software();
+            mySoftware.setCode(productCode);
+            mySoftware.setDescription("Visual Studios");
+            mySoftware.setPrice(57.50);
+            mySoftware.setVersion("Microsoft 1.1");
+            product = mySoftware;
+        } else if (productCode.equalsIgnoreCase("eclipse")) {
+            Software mySoftware = new Software();
+            mySoftware.setCode(productCode);
+            mySoftware.setDescription("Build Java apps");
+            mySoftware.setPrice(57.50);
+            mySoftware.setVersion("Eclipse Neon");
+            product = mySoftware;
+        } else if (productCode.equalsIgnoreCase("oracle")) {
+            Software mySoftware = new Software();
+            mySoftware.setCode(productCode);
+            mySoftware.setDescription("Latest MySQL");
+            mySoftware.setPrice(54.50);
+            mySoftware.setVersion("Oracle 3.0");
+            product = mySoftware;
+        }
+
+        if (productCode.equalsIgnoreCase("java")) {
+            Book myBook = new Book();
+            myBook.setCode(productCode);
+            myBook.setDescription("ATU Java Programming");
+            myBook.setPrice(57.50);
+            myBook.setAuthor("Joe Brown");
+            product = myBook;
+        } else if (productCode.equalsIgnoreCase("jsp")) {
+            Book myBook = new Book();
+            myBook.setCode(productCode);
+            myBook.setDescription("Java Servlets and JSP");
+            myBook.setPrice(57.50);
+            myBook.setAuthor("Mike White");
+            product = myBook;
+        } else if (productCode.equalsIgnoreCase("mysql")) {
+            Book myBook = new Book();
+            myBook.setCode(productCode);
+            myBook.setDescription("Lennon's MySQL");
+            myBook.setPrice(54.50);
+            myBook.setAuthor("Jim Lennon");
+            product = myBook;
+        }
+
+        return product;
+
+
     }
-
-
-
-
-        return mySoftware;
     //  public static Book or Software getProduct(String productCode) {
     // In a more realistic application, this code would get the data for the product from a file or database
     // For now, this code just uses if/else statements to return the correct product data
