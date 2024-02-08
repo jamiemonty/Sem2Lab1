@@ -51,7 +51,7 @@ public class ProductDB {
             product = myBook;
         }
 
-        if (productCode.equalsIgnoreCase("Post Malone")) {
+        if (productCode.equalsIgnoreCase("Post")) {
             Music myMusic = new Music();
             myMusic.setCode(productCode);
             myMusic.setDescription("Twelve Carat Toothache");
@@ -59,7 +59,7 @@ public class ProductDB {
             myMusic.setArtist("Post Malone");
             myMusic.setLabel("Republic Records");
             product = myMusic;
-        } else if (productCode.equalsIgnoreCase("Kanye West")) {
+        } else if (productCode.equalsIgnoreCase("Kanye")) {
             Music myMusic = new Music();
             myMusic.setCode(productCode);
             myMusic.setDescription("Graduation");
@@ -67,7 +67,7 @@ public class ProductDB {
             myMusic.setArtist("Kanye West");
             myMusic.setLabel("Universal International");
             product = myMusic;
-        } else if (productCode.equalsIgnoreCase("Calvin Harris")) {
+        } else if (productCode.equalsIgnoreCase("Calvin")) {
             Music myMusic = new Music();
             myMusic.setCode(productCode);
             myMusic.setDescription("18 Months");
@@ -77,6 +77,31 @@ public class ProductDB {
             product = myMusic;
         }
 
+        if (productCode.equalsIgnoreCase("SONY")) {
+            TV myTV = new TV();
+            myTV.setCode(productCode);
+            myTV.setDescription("4K Ultra HD HDR LED TV");
+            myTV.setPrice(469.00);
+            myTV.setMake("Sony");
+            myTV.setSize(43);
+            product = myTV;
+        } else if (productCode.equalsIgnoreCase("LG")) {
+            TV myTV = new TV();
+            myTV.setCode(productCode);
+            myTV.setDescription("Smart 4K Ultra HD HDR LED TV");
+            myTV.setPrice(349.99);
+            myTV.setMake("LG TV");
+            myTV.setSize(43);
+            product = myTV;
+        } else if (productCode.equalsIgnoreCase("SAMSUNG")) {
+            TV myTV = new TV();
+            myTV.setCode(productCode);
+            myTV.setDescription("UHD LED 4K HDR Smart TV");
+            myTV.setPrice(389.99);
+            myTV.setMake("Samsung");
+            myTV.setSize(43);
+            product = myTV;
+        }
         return product;
 
 
