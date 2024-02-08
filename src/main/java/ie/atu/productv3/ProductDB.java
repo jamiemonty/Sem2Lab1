@@ -51,6 +51,32 @@ public class ProductDB {
             product = myBook;
         }
 
+        if (productCode.equalsIgnoreCase("Post Malone")) {
+            Music myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("Twelve Carat Toothache");
+            myMusic.setPrice(7.50);
+            myMusic.setArtist("Post Malone");
+            myMusic.setLabel("Republic Records");
+            product = myMusic;
+        } else if (productCode.equalsIgnoreCase("Kanye West")) {
+            Music myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("Graduation");
+            myMusic.setPrice(12.00);
+            myMusic.setArtist("Kanye West");
+            myMusic.setLabel("Universal International");
+            product = myMusic;
+        } else if (productCode.equalsIgnoreCase("Calvin Harris")) {
+            Music myMusic = new Music();
+            myMusic.setCode(productCode);
+            myMusic.setDescription("18 Months");
+            myMusic.setPrice(10.00);
+            myMusic.setArtist("Calvin Harris");
+            myMusic.setLabel("Columbia Records");
+            product = myMusic;
+        }
+
         return product;
 
 

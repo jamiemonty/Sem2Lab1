@@ -1,6 +1,7 @@
 package ie.atu.productv3;
 
-import ie.atu.productv2.Book;
+import ie.atu.productv1.Book;
+import ie.atu.productv1.BookDB;
 
 import java.util.Scanner;
 
@@ -20,14 +21,15 @@ public class ProductApp {
             String productCode = sc.nextLine();  // read the product code
 
             // get the Product object "p"
+            Product product = ProductDB.getProduct(productCode);
             // But this could be a Book or a Software Object? = ProductDB.getProduct(productCode);
 
             // display the output
-            /*
+
             System.out.println();
-            if (p != null) {
-                System.out.println("Description: " + p.toString());
-                System.out.println("Price:       " + p.getPriceFormatted());
+            if (product != null) {
+                System.out.println("Description: " + product.toString());
+                System.out.println("Price:       " + product.getPriceFormatted());
             } else {
                 System.out.println("No product matches this product code.");
             }
@@ -39,7 +41,7 @@ public class ProductApp {
             System.out.print("Continue? (y/n): ");
             choice = sc.nextLine();
             System.out.println();
-            */
+
         }
     }
 }
