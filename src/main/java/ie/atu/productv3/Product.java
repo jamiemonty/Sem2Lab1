@@ -1,5 +1,6 @@
 package ie.atu.productv3;
 
+
 import java.text.NumberFormat;
 
 public class Product {
